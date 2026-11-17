@@ -1,5 +1,7 @@
 # Homelab & Cloud Infrastructure - davidnicolini.com.br
 
+[![Infrastructure CI](https://github.com/davidnicolini/homelab-infrastructure/actions/workflows/ci.yml/badge.svg)](https://github.com/davidnicolini/homelab-infrastructure/actions/workflows/ci.yml)
+
 Infrastructure-as-Code (IaC) and idempotent provisioning scripts for my personal server (Debian 13 Trixie) and cloud-instance deployments. The setup hosts my portfolio (`davidnicolini.com.br`), Java / Spring Boot REST APIs, and PostgreSQL containers with zero exposed inbound ports on the router.
 
 ---
