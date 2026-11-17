@@ -29,12 +29,11 @@ jobs:
 
       - name: Validate Cloudflared YAML template
         run: |
-          sudo apt-get update && sudo apt-get install -y yamllint
-          yamllint -d "{extends: relaxed, rules: {line-length: {max: 120}}}" cloudflared/config.example.yml
+          sudo apt-get update && sudo apt-get install -y yamllint nginx
+          yamllint -d "{extends: relaxed, rules: {document-start: disable, line-length: {max: 120}}}" cloudflared/config.example.yml
 
       - name: Validate Nginx virtual host syntax
         run: |
-          sudo apt-get install -y nginx
           sudo mkdir -p /var/www/davidnicolini.com.br
           sudo cp nginx/sites-available/davidnicolini.conf /etc/nginx/sites-enabled/davidnicolini.conf
           sudo rm -f /etc/nginx/sites-enabled/default
