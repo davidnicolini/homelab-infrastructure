@@ -1,0 +1,11 @@
+# Secrets & Credentials
+*.json
+*.pem
+*.key
+.env
+cloudflared/config.yml
+
+# OS & Editor junk
+.DS_Store
+*.swp
+*~
