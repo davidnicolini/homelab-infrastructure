@@ -1,0 +1,10 @@
+# Copy this file to config.yml and replace placeholders with your real Tunnel UUID
+tunnel: <YOUR_CLOUDFLARE_TUNNEL_UUID>
+credentials-file: /root/.cloudflared/<YOUR_CLOUDFLARE_TUNNEL_UUID>.json
+
+ingress:
+  - hostname: davidnicolini.com.br
+    service: http://localhost:80
+  - hostname: www.davidnicolini.com.br
+    service: http://localhost:80
+  - service: http_status:404
